@@ -1,0 +1,45 @@
+	<header>
+  		<ul id="dropdown1" class="dropdown-content">
+		  <li><a href="#!">Profile</a></li>
+		  <li><a href="#!">Courses</a></li>
+		  <li class="divider"></li>
+		  <li><%= link_to "Log out",destroy_user_session_path, method: :delete %></li>
+		</ul>
+
+		<ul id="dropdown2" class="dropdown-content">
+		  <li><a href="#!">Profile</a></li>
+		  <li><a href="#!">Courses</a></li>
+		  <li class="divider"></li>
+		  <li><%= link_to "Log out",destroy_user_session_path, method: :delete %></li>
+		</ul>
+
+
+
+  		<nav>
+  			<div class="container">  
+			    <div class="nav-wrapper">
+			      <a href="#!" class="brand-logo">Alice Education</a>
+			      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+			      <ul class="right hide-on-med-and-down">
+			        	<li><a href="#">Courses</a></li>
+			        <%if(!user_signed_in?)%>
+				        <li><%= link_to "Sign up", new_user_registration_path %></li>
+				        <li><%= link_to "Log in", new_user_session_path %></li>
+				    <% else %>
+			        	<li><a class="dropdown-button" href="#!" data-activates="dropdown1"><%= current_user.email %><i class="material-icons right"></i></a></li>
+			        <%end%>
+			        
+			      </ul>
+			      <ul class="side-nav" id="mobile-demo">
+			        <li><a href="#">Courses</a></li>
+			        <%if(!user_signed_in?)%>
+				        <li><%= link_to "Sign up", new_user_registration_path %></li>
+				        <li><%= link_to "Log in", new_user_session_path %></li>
+				    <% else %>
+			        	<li><a class="dropdown-button" href="#!" data-activates="dropdown2"><%= current_user.email %><i class="material-icons right"></i></a></li>
+			        <%end%>
+			      </ul>
+			 	</div>
+			 </div>
+  		</nav>	
+  	</header>
