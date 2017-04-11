@@ -11,3 +11,5 @@ rake db:migrate
 
 -->
 -----
+change the Home page
+--> modified the config/locales/routes.rb
