@@ -1,0 +1,13 @@
+add new object to a table created by devise
+
+rails generate migration add_name_to_users name:string
+
+--> add name to field users 
+____
+
+then migrate the newly-created object to the table:
+
+rake db:migrate
+
+-->
+-----
