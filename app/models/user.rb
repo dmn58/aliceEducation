@@ -29,8 +29,7 @@ class User < ApplicationRecord
   				provider: access_token.provider,
   				email: data["email"],
   				uid: access_token.uid,
-  				password: Divise.friendly_token[0,20]
-
+  				password: Devise.friendly_token[0,20]
   				)
   		end
   	end
