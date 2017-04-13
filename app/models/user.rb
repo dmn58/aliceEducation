@@ -26,6 +26,7 @@ class User < ApplicationRecord
   		else
   			user = User.create(
   				name: data["name"],
+          images: data["image"],
   				provider: access_token.provider,
   				email: data["email"],
   				uid: access_token.uid,
