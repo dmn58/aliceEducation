@@ -14,6 +14,12 @@
   <%= render partial: "shared/message"%>
 	<main class="container">
 		<%= yield %>
+
+<%= form_for @post, url: posts_path, html: { multipart: true } do |form| %>
+  <%= form.file_field :post %>
+<% end %>
+
+<%= link_to image_tag(@post.image.url(:med)), @post.image.url %>
 	</main>
   <%= render partial: "shared/footer"%>
     
