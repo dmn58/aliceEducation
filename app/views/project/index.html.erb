@@ -1,0 +1,9 @@
+<h1>Project list</h1>
+<% @project.each do |project|%>
+	<li>
+		<%= link_to project do %>
+			<%= image_tag project.image(:thumb) %>
+			<%= project.name %>
+		<% end %>
+	</li>	
+<%end%>
