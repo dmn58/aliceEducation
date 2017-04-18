@@ -1,9 +1,22 @@
-<h1>Project list</h1>
-<% @project.each do |project|%>
-	<li>
+<div class="row">
+</br>
+	
+	<% @project.each do |project|%>
+
 		<%= link_to project do %>
-			<%= image_tag project.image(:thumb) %>
-			<%= project.name %>
-		<% end %>
-	</li>	
-<%end%>
+			<div class="col s12 m6">
+				<div class="card">
+					<div class="card-image waves-image waves-block waves-ligh">
+						<%= image_tag project.image %>
+					</div>
+
+					<div class="card-content">
+						<span class="card-title gray-text text-darken-4">
+							<%= project.name %>
+						</span> 
+					</div>
+				</div>
+			</div>	
+		<% end %>	
+	<%end%>
+</div>
