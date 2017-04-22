@@ -44,6 +44,9 @@ gem 'omniauth-facebook'
 gem 'activeadmin', github: 'activeadmin'
 gem 'paperclip', '~> 5.1'
 gem 'friendly_id', '~> 5.1'
+gem 'material_icons'
+gem 'active_admin-sortable_tree', '~> 0.2.1'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

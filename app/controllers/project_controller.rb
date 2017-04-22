@@ -5,7 +5,7 @@ class ProjectController < ApplicationController
 
   def show
   	@project = Project.find(params[:id])
-  	@tasks = @project.tasks
+  	@tasks = @project.tasks.order(:tag)
 
   	@joined = false
 
@@ -14,5 +14,9 @@ class ProjectController < ApplicationController
   	end
 
   	@user = @project.users.order('created_at desc').first(10)
+  end
+
+  def shortname
+    name.length > 25? name[0..25] + "..." : name 
   end
 end
