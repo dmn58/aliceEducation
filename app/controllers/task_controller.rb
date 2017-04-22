@@ -19,5 +19,10 @@ class TaskController < ApplicationController
   		flash[:notice] = "no permission to this"
   		redirect_to project
   	end
+
+    @next_task = @task.next 
+    @prev_task = @task.previous
+
+
   end
 end

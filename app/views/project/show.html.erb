@@ -28,11 +28,23 @@
 				<%end%>
 
 			<%else%>
-				<h5><%= current_user.name%></h5>
-				<h5>list of users taking this course</h5>
-				<% @user.each do |u|%>
-				<li><%=u.name%></li>
-				<% end %>
+
+				<div class="card-content center">
+					<%= image_tag avatar_url(current_user), class: "circle responsive-image avatar-medium"%><br>
+					<h5><%= current_user.name%></h5>
+				</div>
+
+				<div class="card-action center">
+					<% @user.reject{|u| u == current_user}.each do |u|%>
+						<span class="valign-wrapper">
+							<%= image_tag avatar_url(u), class: "circle responsive-image avatar-small"%><br>
+								<%=u.name%>
+						</span><br>
+					<% end %>
+				</div>
+				
+				
+				
 			<%end%>
 		</div>
 	</div>
