@@ -56,8 +56,14 @@
 			</div>
 			<div class="card-content grey-text text-darken-4">
 				<h5><%= @project.name %></h5>
+
+				<span id="average_rating"></span>
+				<span> <%= @reviews.count%> <%= @reviews.count > 1? "reivews" : "review"%></span>
+
 				<hr>
 				<%= @project.content%>
+
+
 				<div class="collection">
 					<% @tasks.each do |task|%>
 						<% if task.header %>
@@ -74,13 +80,29 @@
 						<% end %>
 					<% end %>
 				</div>
+
+				<div class="card-content">
+				<h4>Reviews</h4>
+				<div><%= render 'reviews/form' if @joined && !@hasReview%></div>
+				<div><%= render 'reviews/index'%></div>
+				</div>
+
 			</div>
 		</div>
 	</div>
 </div>
 
 
+	<script type="text/javascript">
+	
+	$('#average_rating').raty({
+		path: '/assets',
+		readOnly: true,
+		score: <%=@project.average_rate %>	
+	});
+	</script>
 
+			
 
 
 <h1> <%= @project.name%></h1>
