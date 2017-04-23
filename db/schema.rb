@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170422123308) do
+ActiveRecord::Schema.define(version: 20170423141053) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -125,7 +125,7 @@ ActiveRecord::Schema.define(version: 20170422123308) do
     t.string   "video"
     t.boolean  "header",     default: false, null: false
     t.integer  "project_id"
-    t.string   "tag"
+    t.integer  "tag"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
     t.string   "slug"
