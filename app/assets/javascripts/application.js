@@ -19,3 +19,4 @@
 //= require turbolinks
 //= require materialize-sprockets
 //= require toastr
+//= require jquery.timeago
