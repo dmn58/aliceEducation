@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AliceCom</title>
+    <title>
+
+    </title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= yield :head %>
+
+
+    <script src="//load.sumome.com/" data-sumo-site-id="353da4e801ab4d5db2921ff684186fbe43328f2af167d743f0b4c309bb87dbd0" async="async"></script>
+
   </head>
 
   <body>
