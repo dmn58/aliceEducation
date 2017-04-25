@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require active_admin
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
@@ -19,3 +20,4 @@
 //= require turbolinks
 //= require materialize-sprockets
 //= require toastr
+//= require jquery.timeago

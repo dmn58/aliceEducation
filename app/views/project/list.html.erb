@@ -1,0 +1,31 @@
+<h1> Projects I'm taking </h1>
+
+<div class="row">
+</br>
+	<% if @project.count > 0%>
+		<% @project.each do |project|%>
+
+			<%= link_to project do %>
+				<div class="col s12 m6 l4">
+					<div class="card">
+						<div class="card-image waves-image waves-block waves-ligh">
+							<%= image_tag project.image %>
+						</div>
+
+						<div class="card-content" style="height: 6em">
+							<span class="card-title gray-text text-darken-4">
+								<%= project.shortname %>
+							</span> 
+						</div>
+					</div>
+				</div>	
+			<% end %>	
+		<%end%>
+	<%else%>
+	<div class="center">
+		<h5>You are not taking any courses</h5>
+		<%= link_to "Let's take one course TODAY", root_path, class: "btn btn-primary"%>
+	</div>
+	<% end %>
+
+</div>
